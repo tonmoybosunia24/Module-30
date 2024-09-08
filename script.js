@@ -1,8 +1,8 @@
 // ES6 Intro difference between var, Let and const
 
 
-const  money = 25;
-const rich = money + 20
+// const  money = 25;
+// const rich = money + 20
 // console.log(rich);
 let count = 0;
 count = count + 10;
@@ -83,3 +83,151 @@ mair dimu prochur
 
 
 // Arrow function, multiple parameter, function body
+
+
+// Function Declaration
+function add(a, b){
+       // const result = a + b;
+       return a + b;
+}
+// Function Expression
+const add2 = function(a, b){
+       return a + b;
+}
+// Arrow Function
+const add3 = (a, b) => a + b;
+const sum = add3(5, 5);
+// console.log(sum)
+
+
+
+// More Arrow functions and big arrow function
+
+
+// With Peramiter
+const difference = (x, y) => x - y; 
+const multiply = (first, second, third, forth) => first * second * third * forth;
+const getAge = (person) => person.age;
+const Studentsss = {name: "tonmoy", age: 19}
+const age = getAge(Studentsss)
+// console.log(age)
+const getThird = numbersss => numbersss[2];
+const thid = [5, 4, 11,2, 5,7,2];
+const thirds = getThird(thid);
+// console.log(thirds);
+
+// No Peramiter
+const getpi = () => Math.PI;
+// console.log(getpi())
+
+// Large Arrow Function
+
+const doMath = (x,y,z) => {
+       const sum = x + y + z;
+       const mult = x * y * z;
+       const restult = sum + mult;
+       return restult;
+}
+const result = doMath(2,5,7);
+// console.log(result)
+
+
+
+// Spread operator, array max, copy arrays
+
+
+
+const max = Math.max(6, 23, 14, 75,63, 22, 46, 85)
+const numberssss = [3, 5, 7, 9, 11,13, 15, 17, 19, 21];
+const Arraymax = Math.max(...numberssss) /* (...) এর সাহায্যে কোন এ্যারে থেকে তার ভেল্যু গুলা পাওয়া যায়। */
+// console.log(...numberssss)
+// console.log(Arraymax)
+
+// Use spread Operatior To Copy
+const nums = [4, 5, 87, 9]
+const nums2 = nums;
+const dosto = [... nums];
+// console.log(dosto)
+nums.push(100);
+// console.log(nums)
+// console.log(dosto)
+
+// Advanced
+const sonkkha = [...nums, 999];
+// console.log(sonkkha)
+
+
+
+// (advanced) Object and Array Destructure
+
+
+
+const actor = {
+       name: "Ananta",
+       age: 30,
+       phone: "01780259656",
+       money: 1321324165465
+}
+// const phone = actor.phone;
+// const names = actor.name
+// const ages = actor.age
+// Distructure
+const{phone, money : tka} = actor; /* (const{phone} = actor;) এভাবে প্রোপারটি এর ভেল্যু গুলাকে পাওয়া যায়। */
+// const{money} = actor;
+// console.log(phone, tka)
+// console.log(money)
+// Advance
+const numbersssss = [45,99];
+const [fst, sec] = numbersssss;
+const [x,y] = [12, 66];
+function doubleThem(a, b){
+       return [a*2, b*2]
+}
+const [prothom, ditiyo] =  doubleThem(6,9)
+// console.log(prothom, ditiyo)
+
+
+
+// Keys, values, entries, delete, seal, freeze
+
+
+
+// const glasss = {
+//        name: "glass",
+//        color: "golden",
+//        Price: 12,
+//        iscleaned: true
+// };
+// console.log(glasss)
+// const keys = Object.keys(glasss) /* (Object.keys(glasss)) কোন অবজেক্ট এর কিস বা প্রোপারটি গুলা বের করার জন্য। */
+// const valuess = Object.values(glasss) /* (Object.values(glasss)) কোন অবজেক্ট এর ভেল্যু গুলা বের করার জন্য। */
+// const pair = Object.entries(glasss) /* ( Object.entries(glasss)) এ্যারে এর মধ্যে এ্যারে বের করার জন্য */
+// delete glasss.iscleaned; /* (delete glasss.iscleaned;) কোন অবজেক্ট থেকে কোন প্রোপারটি কে ডিলিট করার মাধ্যম। */
+// const {iscleaned, ...shortGlass} = glasss; /* এটার সাহায্যেও রিমুভ করা যায়। */
+// console.log(shortGlass)
+// console.log(keys)
+// console.log(valuess)
+// console.log(pair)
+
+
+
+
+// for of, for in, Module Summary and Practice Problems
+
+
+
+const nus = [1, 6, 8, 10];
+const nobab = "siraj ud doula";
+// for(const char of nobab){
+//        console.log(char)
+// }
+const glasss = {
+       name: "glass",
+       color: "golden",
+       Price: 12,
+       iscleaned: true
+};
+for(const key in glasss){ /* অবজেক্ট এর মধ্যে ফর লুপ চালানোর জন্য। */
+       const value = glasss[key]
+       console.log(key, value)
+}
